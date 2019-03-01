@@ -1,24 +1,21 @@
 package com.github.eciuca.springmvc.todowebapp.model;
 
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "TODOS")
+@Document(collection = "todos")
 public class Todo {
 
     @Id
-    @GeneratedValue
-    private long id;
-
-    @Column
+    private String id;
     private String name;
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

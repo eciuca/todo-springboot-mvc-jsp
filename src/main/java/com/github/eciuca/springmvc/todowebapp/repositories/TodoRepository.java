@@ -1,7 +1,7 @@
 package com.github.eciuca.springmvc.todowebapp.repositories;
 
 import com.github.eciuca.springmvc.todowebapp.model.Todo;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface TodoRepository extends JpaRepository<Todo, Long> {
+public interface TodoRepository extends MongoRepository<Todo, String> {
 }

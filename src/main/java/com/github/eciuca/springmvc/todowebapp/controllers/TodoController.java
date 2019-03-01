@@ -29,7 +29,7 @@ public class TodoController {
     }
 
     @RequestMapping(value = {"/todos/{id}/delete"}, method = RequestMethod.GET)
-    public String deleteTodo(@PathVariable int id) {
+    public String deleteTodo(@PathVariable String id) {
         todoService.deleteTodo(id);
 
         return "redirect:/todos";

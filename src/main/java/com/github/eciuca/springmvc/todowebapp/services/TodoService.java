@@ -9,7 +9,7 @@ public interface TodoService {
 
     List<Todo> getAllTodos();
 
-    void deleteTodo(long id);
+    void deleteTodo(String id);
 
     Todo createNewTodo();
 }
